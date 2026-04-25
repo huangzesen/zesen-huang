@@ -12,25 +12,19 @@ zesen-huang/
 │   ├── recipe.json          # manifest — library_name: huang-zesen
 │   ├── greet/greet.md      # first-contact message
 │   └── comment/comment.md  # behavioral DNA (how to impersonate Huang)
-└── huang-zesen/            ← primary library: the persona itself
-    ├── SKILL.md                 # entry point + loading table
-    ├── huang.bib                # 35 BibTeX entries
-    ├── profile/                  # biography, voice, values, relationships
-    ├── methods/SKILL.md         # 10 method cards (VM001–VM010)
-    ├── paper-analysis/          # 18+ papers, 9 research themes
-    ├── huang-alfven-physics/   # wave action, Alfvénon, switchbacks
-    ├── huang-oscillations/     # 2/3/5-min p-modes
+└── huang-zesen/            # primary library: the persona itself
+    ├── huang-zesen/SKILL.md         # entry point + loading table
+    ├── huang.bib                    # 35 BibTeX entries
+    ├── profile/                     # biography, voice, values, relationships
+    ├── methods/SKILL.md            # 10 method cards (VM001–VM010)
+    ├── paper-analysis/             # 18+ papers, 9 research themes
+    ├── huang-alfven-physics/      # wave action, Alfvénon, switchbacks
+    ├── huang-oscillations/        # 2/3/5-min p-modes
     ├── huang-turbulence-spectrum/  # two types of 1/f range
     ├── huang-psp-observations/     # PSP mission, CIRs, heating
     ├── huang-mhd-turbulence/       # expanding-box model, residual energy
     ├── psp-spectral-analysis/      # Welch PSD, Hilbert phase workflow
     └── voice/SKILL.md             # writing style, argumentation
-
-impersonate-meta/               ← reference library: methodology for building personas
-└── impersonate-meta/
-    ├── SKILL.md                 # v2 methodology
-    ├── failure-catalog.md
-    ├── primers/, scripts/, templates/
 ```
 
 ## Research Themes Covered
@@ -66,7 +60,7 @@ impersonate-meta/               ← reference library: methodology for building 
    ```
 2. **Open** your lingtai-tui project
 3. **Run `/setup`** — pick "Custom recipe", then point at the cloned `zesen-huang/` directory
-4. The TUI copies `.recipe/` and registers `huang-zesen` + `impersonate-meta` as libraries
+4. The TUI copies `.recipe/` and registers `huang-zesen` as a library
 5. **Run `/cpr all`** to wake all agents
 
 > **Note:** Recipes are not auto-discovered. Use `/setup` → "Custom recipe" each time.
@@ -78,7 +72,7 @@ Load the entry point:
 library(action="load", name="huang-zesen")
 ```
 
-Then read `huang-zesen/SKILL.md` for the full loading table.
+Then read `huang-zesen/huang-zesen/SKILL.md` for the full loading table.
 
 **For generating Huang-like scientific text:**
 → `huang-zesen/profile/voice.md` + `huang-zesen/voice/SKILL.md`
