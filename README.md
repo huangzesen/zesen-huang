@@ -1,33 +1,53 @@
 # zesen-huang
 
+> **Built with [Lingtai](https://github.com/your-lingtai-link)** — the agent runtime that makes this persona possible. Lingtai runs a network of specialized AI agents that research, cross-validate, and assemble a sourced persona from public academic records. See [impersonate-meta](https://github.com/huangzesen/impersonate-meta) for the open-source methodology behind this recipe.
+
+---
+
 **A sourced persona skill for Zesen Huang** — solar physicist, UCLA (Marco Velli group).
 
-This recipe installs the complete Zesen Huang persona into a lingtai agent: ~4,600 lines of structured skills across 11 domain files, a 35-entry bibliography, 10 method cards, and the four-piece profile (biography, voice, values, relationships).
+This recipe installs the complete Zesen Huang persona into a Lingtai agent. The agent network researched 18+ papers, extracted 9 research themes, built 11 domain skills, and assembled the four-piece profile (biography, voice, values, relationships) — all with traceable sources.
+
+## How to Impersonate Zesen Huang
+
+1. **Clone and import** this recipe into a Lingtai project:
+   ```bash
+   git clone https://github.com/huangzesen/zesen-huang.git
+   ```
+2. **Open** your Lingtai project, run **`/setup`** → pick "Custom recipe" → point at `zesen-huang/`
+3. **Say:** `"act as Zesen Huang"` — the agent loads the persona and can answer questions, write abstracts, or discuss research in his voice and style
+4. **Be specific:** `"Write a referee report on a paper about switchbacks as curved field lines"` or `"Explain the Alfvénon to a first-year graduate student"`
+
+The agent draws from:
+- **Domain skills** — wave action, MHD turbulence, PSP observations, oscillations
+- **Method cards** — how he thinks, not just what he knows
+- **Profile** — biography, values, relationships
+- **Voice** — argumentation structure, metaphors, tone
 
 ## What's Included
 
 ```
 zesen-huang/
 ├── .recipe/
-│   ├── recipe.json          # manifest — library_name: huang-zesen
-│   ├── greet/greet.md      # first-contact message
-│   └── comment/comment.md  # behavioral DNA (how to impersonate Huang)
-└── huang-zesen/            # primary library: the persona itself
+│   ├── recipe.json
+│   ├── greet/greet.md
+│   └── comment/comment.md
+└── huang-zesen/
     ├── huang-zesen/SKILL.md         # entry point + loading table
     ├── huang.bib                    # 35 BibTeX entries
     ├── profile/                     # biography, voice, values, relationships
-    ├── methods/SKILL.md            # 10 method cards (VM001–VM010)
-    ├── paper-analysis/             # 18+ papers, 9 research themes
+    ├── methods/SKILL.md           # 10 method cards (VM001–VM010)
+    ├── paper-analysis/            # 18+ papers, 9 research themes
     ├── huang-alfven-physics/      # wave action, Alfvénon, switchbacks
     ├── huang-oscillations/        # 2/3/5-min p-modes
     ├── huang-turbulence-spectrum/  # two types of 1/f range
     ├── huang-psp-observations/     # PSP mission, CIRs, heating
     ├── huang-mhd-turbulence/       # expanding-box model, residual energy
     ├── psp-spectral-analysis/      # Welch PSD, Hilbert phase workflow
-    └── voice/SKILL.md             # writing style, argumentation
+    └── voice/SKILL.md            # writing style, argumentation
 ```
 
-## Research Themes Covered
+## Research Themes
 
 1. 1/f spectrum — two types (fast/Alfvénic vs. slow/mixed)
 2. Wave action conservation in expanding solar wind
@@ -52,37 +72,6 @@ zesen-huang/
 | Gaussianity Scalogram — ApJL 973:L26 | 2024 |
 | Wave Action Conservation — ApJ 935:60 | 2022 |
 
-## How to Import
-
-1. **Clone** this repo anywhere:
-   ```bash
-   git clone https://github.com/huangzesen/zesen-huang.git
-   ```
-2. **Open** your lingtai-tui project
-3. **Run `/setup`** — pick "Custom recipe", then point at the cloned `zesen-huang/` directory
-4. The TUI copies `.recipe/` and registers `huang-zesen` as a library
-5. **Run `/cpr all`** to wake all agents
-
-> **Note:** Recipes are not auto-discovered. Use `/setup` → "Custom recipe" each time.
-
-## How to Use the Persona
-
-Load the entry point:
-```
-library(action="load", name="huang-zesen")
-```
-
-Then read `huang-zesen/huang-zesen/SKILL.md` for the full loading table.
-
-**For generating Huang-like scientific text:**
-→ `huang-zesen/profile/voice.md` + `huang-zesen/voice/SKILL.md`
-
-**For domain expertise:**
-→ `huang-zesen/huang-alfven-physics/SKILL.md` (or the relevant domain skill)
-
-**For how he thinks:**
-→ `huang-zesen/methods/SKILL.md` (10 method cards, VM001–VM010)
-
 ## Known Limitations
 
 | Item | Status |
@@ -93,7 +82,7 @@ Then read `huang-zesen/huang-zesen/SKILL.md` for the full loading table.
 
 ## Source Discipline
 
-Every claim in this persona is traceable:
+Every claim is traceable:
 - **Verifiable** → citekey to published source
 - **Behavioral** → ⚠️ [unverified] where audio/video not found
 - **Fabricated** → NEVER
