@@ -104,12 +104,6 @@ Every claim in this persona is traceable:
 - **Behavioral** → ⚠️ [unverified] where audio/video not found
 - **Fabricated** → NEVER
 
-## Building Your Own Persona
-
-This recipe also ships the `impersonate-meta` library — the methodology used to build the Huang persona. To build a persona for someone else, load `impersonate-meta` and follow the two-phase workflow:
-1. Phase 1: Intelligence Gathering
-2. Phase 2: Avatar Network Persona Production
-
 ## License
 
 MIT — use freely, credit appreciated.
