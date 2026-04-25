@@ -1,0 +1,7 @@
+{
+  "id": "zesen-huang",
+  "version": "1.0.0",
+  "name": "Zesen Huang Persona",
+  "description": "A sourced persona skill for Zesen Huang (UCLA solar physicist) — biography, voice, values, relationships, and 9 domain expertise areas.",
+  "library_name": "huang-zesen"
+}
